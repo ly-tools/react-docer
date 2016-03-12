@@ -1,0 +1,37 @@
+{
+  "name": "react-docer",
+  "version": "1.0.0",
+  "description": "A tool to parse doc from jsx source file",
+  "main": "index.js",
+  "scripts": {
+    "test": "NODE_ENV=test ./node_modules/.bin/_mocha --require should --reporter spec",
+    "test-cov": "NODE_ENV=test node ./node_modules/.bin/istanbul cover ./node_modules/.bin/_mocha -- --require should",
+    "test-travis": "NODE_ENV=test node ./node_modules/.bin/istanbul cover ./node_modules/.bin/_mocha --report lcovonly -- --require should"
+  },
+  "author": "ly-tools",
+  "license": "MIT",
+  "devDependencies": {
+    "istanbul": "~0.4.0",
+    "mocha": "~2.3.3",
+    "should": "^8.1.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ly-tools/react-docer"
+  },
+  "keywords": [],
+  "bugs": {
+    "url": "https://github.com/ly-tools/react-docer/issues"
+  },
+  "publishConfig": {
+    "registry": "http://registry.npmjs.org/"
+  },
+  "dependencies": {
+    "babel-generator": "^6.7.2",
+    "babel-traverse": "^6.7.3",
+    "babel-types": "^6.7.2",
+    "babylon": "^6.7.0",
+    "linglog": "0.0.4",
+    "lodash": "^4.6.1"
+  }
+}

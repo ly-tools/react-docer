@@ -1,0 +1,249 @@
+{
+  "dependencies": [
+    "react",
+    "babel"
+  ],
+  "classes": [
+    {
+      "name": "Component",
+      "description": "",
+      "methods": [
+        {
+          "description": "constructor description",
+          "name": "constructor",
+          "params": []
+        },
+        {
+          "description": "render description",
+          "name": "render",
+          "params": []
+        }
+      ],
+      "propTypes": [
+        {
+          "name": "privateProp",
+          "required": false,
+          "type": {
+            "name": "string"
+          },
+          "description": "[private]\nDescription of multilineProp."
+        },
+        {
+          "name": "multilineProp",
+          "required": false,
+          "type": {
+            "name": "string"
+          },
+          "description": "Description of multilineProp.\nThis should be multiline\nAnything else ?"
+        },
+        {
+          "name": "optionalArray",
+          "required": false,
+          "type": {
+            "name": "array"
+          },
+          "description": "Description of optionalArray.",
+          "defaultValue": "[]"
+        },
+        {
+          "name": "optionalBool",
+          "required": false,
+          "type": {
+            "name": "bool"
+          },
+          "description": "Description of optionalBool.",
+          "defaultValue": "false"
+        },
+        {
+          "name": "optionalFunc",
+          "required": false,
+          "type": {
+            "name": "func"
+          },
+          "description": "Description of optionalFunc.",
+          "defaultValue": "() => {}"
+        },
+        {
+          "name": "optionalNumber",
+          "required": false,
+          "type": {
+            "name": "number"
+          },
+          "description": "Description of optionalNumber.",
+          "defaultValue": "123"
+        },
+        {
+          "name": "optionalObject",
+          "required": false,
+          "type": {
+            "name": "object"
+          },
+          "description": "Description of optionalObject.",
+          "defaultValue": "{}"
+        },
+        {
+          "name": "optionalString",
+          "required": false,
+          "type": {
+            "name": "string"
+          },
+          "description": "Description of optionalString.",
+          "defaultValue": "'abc'"
+        },
+        {
+          "name": "optionalNode",
+          "required": false,
+          "type": {
+            "name": "node"
+          },
+          "description": "Description of optionalNode.",
+          "defaultValue": "null"
+        },
+        {
+          "name": "optionalElement",
+          "required": false,
+          "type": {
+            "name": "element"
+          },
+          "description": "Description of optionalElement.",
+          "defaultValue": "null"
+        },
+        {
+          "name": "optionalMessage",
+          "required": true,
+          "type": {
+            "name": "instanceOf",
+            "value": {
+              "name": "Message"
+            }
+          },
+          "description": "Description of optionalMessage.",
+          "defaultValue": "null"
+        },
+        {
+          "name": "optionalEnum",
+          "required": false,
+          "type": {
+            "name": "oneOf",
+            "value": [
+              "News",
+              "Photos"
+            ]
+          },
+          "description": "Description of optionalEnum.",
+          "defaultValue": "'News'"
+        },
+        {
+          "name": "optionalUnion",
+          "required": false,
+          "type": {
+            "name": "oneOfType",
+            "value": [
+              {
+                "name": "string"
+              },
+              {
+                "name": "number"
+              },
+              {
+                "name": "instanceOf",
+                "value": {
+                  "name": "Message"
+                }
+              }
+            ]
+          },
+          "description": "Description of optionalUnion.",
+          "defaultValue": "null"
+        },
+        {
+          "name": "optionalArrayOf",
+          "required": false,
+          "type": {
+            "name": "arrayOf",
+            "value": {
+              "name": "number"
+            }
+          },
+          "description": "Description of optionalArrayOf.",
+          "defaultValue": "[1, 2, 3]"
+        },
+        {
+          "name": "optionalObjectOf",
+          "required": false,
+          "type": {
+            "name": "objectOf",
+            "value": {
+              "name": "number"
+            }
+          },
+          "description": "Description of optionalObjectOf.",
+          "defaultValue": "{}"
+        },
+        {
+          "name": "optionalObjectWithShape",
+          "required": false,
+          "type": {
+            "name": "shape",
+            "value": [
+              {
+                "name": "color",
+                "required": true,
+                "type": {
+                  "name": "string"
+                },
+                "description": "Description of shape.color"
+              },
+              {
+                "name": "fontSize",
+                "required": false,
+                "type": {
+                  "name": "number"
+                },
+                "description": "Description of shape.fontSize"
+              }
+            ]
+          },
+          "description": "Description of optionalObjectWithShape.",
+          "defaultValue": "{\n  color: 'red',\n  fontSize: 14\n}"
+        },
+        {
+          "name": "requiredFunc",
+          "required": true,
+          "type": {
+            "name": "func"
+          },
+          "description": "Description of requiredFunc.",
+          "defaultValue": "() => {}"
+        },
+        {
+          "name": "requiredAny",
+          "required": true,
+          "type": {
+            "name": "any"
+          },
+          "description": "Description of requiredAny.",
+          "defaultValue": "false"
+        },
+        {
+          "name": "customProp",
+          "required": false,
+          "type": {
+            "name": "Custom Validator"
+          },
+          "description": "Description of customProp.",
+          "defaultValue": "null"
+        },
+        {
+          "name": "noDefaultValueProp",
+          "required": false,
+          "type": {
+            "name": "string"
+          },
+          "description": "Description of noDefaultValueProp."
+        }
+      ],
+      "displayName": "Component"
+    }
+  ]
+}
