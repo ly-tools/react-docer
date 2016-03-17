@@ -6,7 +6,7 @@
   "classes": [
     {
       "name": "Component",
-      "description": "",
+      "description": "class description",
       "methods": [
         {
           "description": "constructor description",

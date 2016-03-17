@@ -19,6 +19,88 @@ $ npm install --save react-docer
 
 ## Usage
 
+```js
+const docer = require('docer');
+
+const content = `
+const React = require('react');
+import babel from 'babel';
+/**
+ * class description
+ */
+class Component extends React.Component {
+  /**
+   * constructor description
+   */
+  constructor() {
+    super();
+  }
+  /**
+   * render description
+   */
+  render() {
+    return (
+      <div></div>
+    );
+  }
+}
+
+Component.propTypes = {
+  /**
+   * Description of someProp.
+   */
+  someProp: React.PropTypes.string
+};
+Component.displayName = 'Component';
+Component.defaultProps = {
+  someProp: ''
+};
+`;
+
+const result = docer(content);
+```
+
+Then the result will be:
+
+```json
+{
+  "dependencies": [
+    "react",
+    "babel"
+  ],
+  "classes": [
+    {
+      "name": "Component",
+      "description": "class description",
+      "methods": [
+        {
+          "description": "constructor description",
+          "name": "constructor",
+          "params": []
+        },
+        {
+          "description": "render description",
+          "name": "render",
+          "params": []
+        }
+      ],
+      "propTypes": [
+        {
+          "name": "someProp",
+          "required": false,
+          "type": {
+            "name": "string"
+          },
+          "description": "Description of someProp.",
+          "defaultValue": "''"
+        }
+      ],
+      "displayName": "Component"
+    }
+  ]
+}
+```
+
 ## Test
 
 ```bash

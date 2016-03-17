@@ -1,6 +1,9 @@
 'use strict';
 const React = require('react');
 import babel from 'babel';
+/**
+ * class description
+ */
 class Component extends React.Component {
   /**
    * constructor description
