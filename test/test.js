@@ -1,8 +1,7 @@
-'use strict';
-
-const fs = require('fs');
-const docer = require('../lib/parse');
-const path = require('path');
+import 'babel-polyfill';
+import fs from 'fs';
+import docer from '../lib/parse'
+import path from 'path';
 
 const content = `
 const React = require('react');
@@ -38,8 +37,6 @@ Component.defaultProps = {
   someProp: ''
 };
 `;
-
-console.log(JSON.stringify(docer(content), null, 2));
 
 describe('react-docer', () => {
   it('should work', () => {
