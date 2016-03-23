@@ -104,9 +104,8 @@ Then the result will be:
 ## Test
 
 ```bash
-$ npm run test
-$ npm run test-cov
-$ npm run test-travis
+$ npm run test # running unit tests
+$ npm run dev # watching files change and building automaticly
 ```
 
 ## License
