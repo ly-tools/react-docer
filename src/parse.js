@@ -25,7 +25,7 @@ export default (content, config) => {
   let result = {};
   traverse(parse(content, {
     sourceType: 'module',
-    plugins: ['jsx']
+    plugins: ['jsx', 'classProperties']
   }), {
     enter(path) {
       const node = path.node;

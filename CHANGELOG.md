@@ -1,5 +1,9 @@
 # react-docer
 
+## 1.0.4
+
+* Fix error when static properties in class
+
 ## 1.0.3
 
 * Fix error when no classes found
