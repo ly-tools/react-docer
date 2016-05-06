@@ -18,11 +18,11 @@ export default {
   },
   parse: (node, result) => {
     const getter = defineGetter(node);
-    let cla = result.classes.find(c => c.name === getter('left.object.name'));
+    let cla = (result.classes || []).find(c => c.name === getter('left.object.name'));
     if (!cla) return;
     (getter('right.properties') || []).filter(prop => isObjectProperty(prop)).forEach(prop => {
       const propGetter = defineGetter(prop);
-      let proptype = cla.propTypes.find(p => p.name === propGetter('key.name'));
+      let proptype = (cla.propTypes || []).find(p => p.name === propGetter('key.name'));
       proptype && (proptype.defaultValue = generator(propGetter('value')).code);
     });
   }

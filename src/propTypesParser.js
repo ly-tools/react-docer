@@ -19,7 +19,7 @@ export default {
   },
   parse: (node, result) => {
     const getter = defineGetter(node);
-    result.classes.find(cla => cla.name === getter('left.object.name')).propTypes = (getter('right.properties') || []).filter(prop => isObjectProperty(prop)).map(prop => {
+    (result.classes || []).find(cla => cla.name === getter('left.object.name')).propTypes = (getter('right.properties') || []).filter(prop => isObjectProperty(prop)).map(prop => {
       const propGetter = defineGetter(prop);
       const isRequired = isMemberExpression(propGetter('value')) && propGetter('value.property.name') === 'isRequired';
       return {
