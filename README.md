@@ -20,9 +20,11 @@ $ npm install --save react-docer
 ## Usage
 
 ```js
-const docer = require('docer');
+const docer = require('react-docer');
+docer(content);
+```
 
-const content = `
+```js
 const React = require('react');
 import babel from 'babel';
 /**
@@ -30,11 +32,23 @@ import babel from 'babel';
  */
 class Component extends React.Component {
   /**
+   * static prop description
+   */
+  static someProps = 'qwerty'
+  /**
    * constructor description
    */
   constructor() {
     super();
   }
+  /**
+   * get value
+   */
+  getValue() {}
+  /**
+   * set value
+   */
+  setValue(value) {}
   /**
    * render description
    */
@@ -55,9 +69,6 @@ Component.displayName = 'Component';
 Component.defaultProps = {
   someProp: ''
 };
-`;
-
-const result = docer(content);
 ```
 
 Then the result will be:
@@ -71,6 +82,7 @@ Then the result will be:
   "classes": [
     {
       "name": "Component",
+      "superClass": "React.Component",
       "description": "class description",
       "methods": [
         {
@@ -79,9 +91,29 @@ Then the result will be:
           "params": []
         },
         {
+          "description": "get value",
+          "name": "getValue",
+          "params": []
+        },
+        {
+          "description": "set value",
+          "name": "setValue",
+          "params": [
+            "value"
+          ]
+        },
+        {
           "description": "render description",
           "name": "render",
           "params": []
+        }
+      ],
+      "properties": [
+        {
+          "description": "static prop description",
+          "name": "someProps",
+          "value": "'qwerty'",
+          "static": true
         }
       ],
       "propTypes": [

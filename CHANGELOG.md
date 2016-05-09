@@ -1,5 +1,9 @@
 # react-docer
 
+## 1.1.1
+
+* Update Readme
+
 ## 1.1.0
 
 * Support static properties in class
