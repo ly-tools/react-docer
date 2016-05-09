@@ -1,0 +1,57 @@
+{
+  "dependencies": [
+    "react",
+    "babel"
+  ],
+  "classes": [
+    {
+      "name": "Component",
+      "superClass": "React.Component",
+      "description": "class description",
+      "methods": [
+        {
+          "description": "constructor description",
+          "name": "constructor",
+          "params": []
+        },
+        {
+          "description": "get value",
+          "name": "getValue",
+          "params": []
+        },
+        {
+          "description": "set value",
+          "name": "setValue",
+          "params": [
+            "value"
+          ]
+        },
+        {
+          "description": "render description",
+          "name": "render",
+          "params": []
+        }
+      ],
+      "properties": [
+        {
+          "description": "static prop description",
+          "name": "someProps",
+          "value": "'qwerty'",
+          "static": true
+        }
+      ],
+      "propTypes": [
+        {
+          "name": "someProp",
+          "required": false,
+          "type": {
+            "name": "string"
+          },
+          "description": "Description of someProp.",
+          "defaultValue": "''"
+        }
+      ],
+      "displayName": "Component"
+    }
+  ]
+}

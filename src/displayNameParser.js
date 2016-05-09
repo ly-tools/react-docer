@@ -5,6 +5,11 @@ import {
   isStringLiteral
 } from 'babel-types';
 
+function getDisplayName(node, cla) {
+  const getter = defineGetter(node);
+  cla.displayName = getter('value');
+}
+
 export default {
   name: 'DisplayName',
   check: node => {
@@ -16,6 +21,15 @@ export default {
   },
   parse: (node, result) => {
     const getter = defineGetter(node);
-    (result.classes || []).find(cla => cla.name === getter('left.object.name')).displayName = getter('right.value');
+    let cla = (result.classes || []).find(c => c.name === getter('left.object.name'));
+    if (!cla) return;
+    getDisplayName(getter('right'), cla);
+  },
+  after: result => {
+    (result.classes || []).map(cla => {
+      const displayNameProperty = (cla.properties || []).find(property => property.name === 'displayName');
+      if (!displayNameProperty) return;
+      getDisplayName(displayNameProperty.value, cla);
+    });
   }
 };

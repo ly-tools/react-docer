@@ -38,5 +38,6 @@ export default (content, config) => {
       });
     }
   });
+  plugins.reverse().forEach(plugin => typeof plugin.after === 'function' && plugin.after(result));
   return result;
 };

@@ -1,0 +1,190 @@
+{
+  "dependencies": [
+    "react",
+    "babel"
+  ],
+  "classes": [
+    {
+      "name": "Component",
+      "superClass": "React.Component",
+      "description": "class description",
+      "methods": [
+        {
+          "description": "constructor description",
+          "name": "constructor",
+          "params": []
+        },
+        {
+          "description": "render description",
+          "name": "render",
+          "params": []
+        }
+      ],
+      "properties": [
+        {
+          "description": "Description of propTypes",
+          "name": "propTypes",
+          "value": "{ /**\n   * [private]\n   * Description of multilineProp.\n   */\n  privateProp: React.PropTypes.string,\n  /**\n   * Description of multilineProp.\n   * This should be multiline\n   * Anything else ?\n   */multilineProp: React.PropTypes.string,\n  /**\n   * Description of optionalArray.\n   */optionalArray: React.PropTypes.array,\n  /**\n   * Description of optionalBool.\n   */optionalBool: React.PropTypes.bool,\n  /**\n   * Description of optionalFunc.\n   */optionalFunc: React.PropTypes.func,\n  /**\n   * Description of optionalNumber.\n   */optionalNumber: React.PropTypes.number,\n  /**\n   * Description of optionalObject.\n   */optionalObject: React.PropTypes.object,\n  /**\n   * Description of optionalString.\n   */optionalString: React.PropTypes.string,\n  /**\n   * Description of optionalNode.\n   */optionalNode: React.PropTypes.node,\n  /**\n   * Description of optionalElement.\n   */optionalElement: React.PropTypes.element,\n  /**\n   * Description of optionalMessage.\n   */optionalMessage: React.PropTypes.instanceOf(Message).isRequired,\n  /**\n   * Description of optionalEnum.\n   */optionalEnum: React.PropTypes.oneOf(['News', 'Photos']),\n  /**\n   * Description of optionalUnion.\n   */optionalUnion: React.PropTypes.oneOfType([React.PropTypes.string, React.PropTypes.number, React.PropTypes.instanceOf(Message)]),\n  /**\n   * Description of optionalArrayOf.\n   */optionalArrayOf: React.PropTypes.arrayOf(React.PropTypes.number),\n  /**\n   * Description of optionalObjectOf.\n   */optionalObjectOf: React.PropTypes.objectOf(React.PropTypes.number),\n  /**\n   * Description of optionalObjectWithShape.\n   */optionalObjectWithShape: React.PropTypes.shape({ /**\n                                                       * Description of shape.color\n                                                       */\n    color: React.PropTypes.string.isRequired,\n    /**\n     * Description of shape.fontSize\n     */fontSize: React.PropTypes.number\n  }),\n  /**\n   * Description of requiredFunc.\n   */requiredFunc: React.PropTypes.func.isRequired,\n  /**\n   * Description of requiredAny.\n   */requiredAny: React.PropTypes.any.isRequired,\n  /**\n   * Description of customProp.\n   */customProp: function (props, propName, componentName) {},\n  /**\n   * Description of noDefaultValueProp.\n   */noDefaultValueProp: React.PropTypes.string\n}",
+          "static": true
+        },
+        {
+          "description": "Description of displayName",
+          "name": "displayName",
+          "value": "'Component'",
+          "static": true
+        },
+        {
+          "description": "Description of defaultProps",
+          "name": "defaultProps",
+          "value": "{\n  optionalArray: [],\n  optionalBool: false,\n  optionalFunc: () => {},\n  optionalNumber: 123,\n  optionalObject: {},\n  optionalString: 'abc',\n  optionalNode: null,\n  optionalElement: null,\n  optionalMessage: null,\n  optionalEnum: 'News',\n  optionalUnion: null,\n  optionalArrayOf: [1, 2, 3],\n  optionalObjectOf: {},\n  optionalObjectWithShape: {\n    color: 'red',\n    fontSize: 14\n  },\n  requiredFunc: () => {},\n  requiredAny: false,\n  customProp: null,\n  notDefinedProp: null\n}",
+          "static": true
+        },
+        {
+          "description": "Description of someStaticProps",
+          "name": "someStaticProps",
+          "value": "'asdf'",
+          "static": true
+        },
+        {
+          "description": "Description of someProps",
+          "name": "someProps",
+          "value": "'aaa'",
+          "static": false
+        }
+      ],
+      "propTypes": [
+        {
+          "name": "optionalArray",
+          "defaultValue": "[]",
+          "required": false,
+          "type": {},
+          "description": ""
+        },
+        {
+          "name": "optionalBool",
+          "defaultValue": "false",
+          "required": false,
+          "type": {},
+          "description": ""
+        },
+        {
+          "name": "optionalFunc",
+          "defaultValue": "() => {}",
+          "required": false,
+          "type": {
+            "name": "Custom Validator"
+          },
+          "description": ""
+        },
+        {
+          "name": "optionalNumber",
+          "defaultValue": "123",
+          "required": false,
+          "type": {},
+          "description": ""
+        },
+        {
+          "name": "optionalObject",
+          "defaultValue": "{}",
+          "required": false,
+          "type": {},
+          "description": ""
+        },
+        {
+          "name": "optionalString",
+          "defaultValue": "'abc'",
+          "required": false,
+          "type": {},
+          "description": ""
+        },
+        {
+          "name": "optionalNode",
+          "defaultValue": "null",
+          "required": false,
+          "type": {},
+          "description": ""
+        },
+        {
+          "name": "optionalElement",
+          "defaultValue": "null",
+          "required": false,
+          "type": {},
+          "description": ""
+        },
+        {
+          "name": "optionalMessage",
+          "defaultValue": "null",
+          "required": false,
+          "type": {},
+          "description": ""
+        },
+        {
+          "name": "optionalEnum",
+          "defaultValue": "'News'",
+          "required": false,
+          "type": {},
+          "description": ""
+        },
+        {
+          "name": "optionalUnion",
+          "defaultValue": "null",
+          "required": false,
+          "type": {},
+          "description": ""
+        },
+        {
+          "name": "optionalArrayOf",
+          "defaultValue": "[1, 2, 3]",
+          "required": false,
+          "type": {},
+          "description": ""
+        },
+        {
+          "name": "optionalObjectOf",
+          "defaultValue": "{}",
+          "required": false,
+          "type": {},
+          "description": ""
+        },
+        {
+          "name": "optionalObjectWithShape",
+          "defaultValue": "{\n  color: 'red',\n  fontSize: 14\n}",
+          "required": false,
+          "type": {},
+          "description": ""
+        },
+        {
+          "name": "requiredFunc",
+          "defaultValue": "() => {}",
+          "required": false,
+          "type": {
+            "name": "Custom Validator"
+          },
+          "description": ""
+        },
+        {
+          "name": "requiredAny",
+          "defaultValue": "false",
+          "required": false,
+          "type": {},
+          "description": ""
+        },
+        {
+          "name": "customProp",
+          "defaultValue": "null",
+          "required": false,
+          "type": {},
+          "description": ""
+        },
+        {
+          "name": "notDefinedProp",
+          "defaultValue": "null",
+          "required": false,
+          "type": {},
+          "description": ""
+        }
+      ],
+      "displayName": "Component"
+    }
+  ]
+}

@@ -6,6 +6,14 @@ import babel from 'babel';
  */
 class Component extends React.Component {
   /**
+   * Description of static prop
+   */
+  static staticProp = 'staticProp'
+  /**
+   * Description of normal prop
+   */
+  normalProp = normalProp
+  /**
    * constructor description
    */
   constructor() {

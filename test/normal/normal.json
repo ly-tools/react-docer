@@ -6,6 +6,7 @@
   "classes": [
     {
       "name": "Component",
+      "superClass": "React.Component",
       "description": "class description",
       "methods": [
         {
@@ -241,6 +242,24 @@
             "name": "string"
           },
           "description": "Description of noDefaultValueProp."
+        },
+        {
+          "defaultValue": "null",
+          "name": "notDefinedProp"
+        }
+      ],
+      "properties": [
+        {
+          "description": "Description of static prop",
+          "name": "staticProp",
+          "value": "'staticProp'",
+          "static": true
+        },
+        {
+          "description": "Description of normal prop",
+          "name": "normalProp",
+          "value": "normalProp",
+          "static": false
         }
       ],
       "displayName": "Component"
