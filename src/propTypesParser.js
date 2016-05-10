@@ -55,7 +55,7 @@ export default {
   },
   after: result => {
     (result.classes || []).map(cla => {
-      const propTypesProperty = (cla.properties || []).find(property => property.name === 'defaultProps');
+      const propTypesProperty = (cla.properties || []).find(property => property.name === 'propTypes');
       if (!propTypesProperty) return;
       getPropTypes(propTypesProperty.value, cla);
     });

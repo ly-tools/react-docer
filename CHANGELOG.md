@@ -1,5 +1,9 @@
 # react-docer
 
+## 1.1.2
+
+* Fix type of static properties
+
 ## 1.1.1
 
 * Update Readme

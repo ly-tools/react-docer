@@ -57,131 +57,227 @@
           "name": "optionalArray",
           "defaultValue": "[]",
           "required": false,
-          "type": {},
-          "description": ""
+          "type": {
+            "name": "array"
+          },
+          "description": "Description of optionalArray."
         },
         {
           "name": "optionalBool",
           "defaultValue": "false",
           "required": false,
-          "type": {},
-          "description": ""
+          "type": {
+            "name": "bool"
+          },
+          "description": "Description of optionalBool."
         },
         {
           "name": "optionalFunc",
           "defaultValue": "() => {}",
           "required": false,
           "type": {
-            "name": "Custom Validator"
+            "name": "func"
           },
-          "description": ""
+          "description": "Description of optionalFunc."
         },
         {
           "name": "optionalNumber",
           "defaultValue": "123",
           "required": false,
-          "type": {},
-          "description": ""
+          "type": {
+            "name": "number"
+          },
+          "description": "Description of optionalNumber."
         },
         {
           "name": "optionalObject",
           "defaultValue": "{}",
           "required": false,
-          "type": {},
-          "description": ""
+          "type": {
+            "name": "object"
+          },
+          "description": "Description of optionalObject."
         },
         {
           "name": "optionalString",
           "defaultValue": "'abc'",
           "required": false,
-          "type": {},
-          "description": ""
+          "type": {
+            "name": "string"
+          },
+          "description": "Description of optionalString."
         },
         {
           "name": "optionalNode",
           "defaultValue": "null",
           "required": false,
-          "type": {},
-          "description": ""
+          "type": {
+            "name": "node"
+          },
+          "description": "Description of optionalNode."
         },
         {
           "name": "optionalElement",
           "defaultValue": "null",
           "required": false,
-          "type": {},
-          "description": ""
+          "type": {
+            "name": "element"
+          },
+          "description": "Description of optionalElement."
         },
         {
           "name": "optionalMessage",
           "defaultValue": "null",
-          "required": false,
-          "type": {},
-          "description": ""
+          "required": true,
+          "type": {
+            "name": "instanceOf",
+            "value": {
+              "name": "Message"
+            }
+          },
+          "description": "Description of optionalMessage."
         },
         {
           "name": "optionalEnum",
           "defaultValue": "'News'",
           "required": false,
-          "type": {},
-          "description": ""
+          "type": {
+            "name": "oneOf",
+            "value": [
+              "News",
+              "Photos"
+            ]
+          },
+          "description": "Description of optionalEnum."
         },
         {
           "name": "optionalUnion",
           "defaultValue": "null",
           "required": false,
-          "type": {},
-          "description": ""
+          "type": {
+            "name": "oneOfType",
+            "value": [
+              {
+                "name": "string"
+              },
+              {
+                "name": "number"
+              },
+              {
+                "name": "instanceOf",
+                "value": {
+                  "name": "Message"
+                }
+              }
+            ]
+          },
+          "description": "Description of optionalUnion."
         },
         {
           "name": "optionalArrayOf",
           "defaultValue": "[1, 2, 3]",
           "required": false,
-          "type": {},
-          "description": ""
+          "type": {
+            "name": "arrayOf",
+            "value": {
+              "name": "number"
+            }
+          },
+          "description": "Description of optionalArrayOf."
         },
         {
           "name": "optionalObjectOf",
           "defaultValue": "{}",
           "required": false,
-          "type": {},
-          "description": ""
+          "type": {
+            "name": "objectOf",
+            "value": {
+              "name": "number"
+            }
+          },
+          "description": "Description of optionalObjectOf."
         },
         {
           "name": "optionalObjectWithShape",
           "defaultValue": "{\n  color: 'red',\n  fontSize: 14\n}",
           "required": false,
-          "type": {},
-          "description": ""
+          "type": {
+            "name": "shape",
+            "value": [
+              {
+                "name": "color",
+                "required": true,
+                "type": {
+                  "name": "string"
+                },
+                "description": "Description of shape.color"
+              },
+              {
+                "name": "fontSize",
+                "required": false,
+                "type": {
+                  "name": "number"
+                },
+                "description": "Description of shape.fontSize"
+              }
+            ]
+          },
+          "description": "Description of optionalObjectWithShape."
         },
         {
           "name": "requiredFunc",
           "defaultValue": "() => {}",
-          "required": false,
+          "required": true,
           "type": {
-            "name": "Custom Validator"
+            "name": "func"
           },
-          "description": ""
+          "description": "Description of requiredFunc."
         },
         {
           "name": "requiredAny",
           "defaultValue": "false",
-          "required": false,
-          "type": {},
-          "description": ""
+          "required": true,
+          "type": {
+            "name": "any"
+          },
+          "description": "Description of requiredAny."
         },
         {
           "name": "customProp",
           "defaultValue": "null",
           "required": false,
-          "type": {},
-          "description": ""
+          "type": {
+            "name": "Custom Validator"
+          },
+          "description": "Description of customProp."
         },
         {
           "name": "notDefinedProp",
-          "defaultValue": "null",
+          "defaultValue": "null"
+        },
+        {
+          "name": "privateProp",
           "required": false,
-          "type": {},
-          "description": ""
+          "type": {
+            "name": "string"
+          },
+          "description": "[private]\nDescription of multilineProp."
+        },
+        {
+          "name": "multilineProp",
+          "required": false,
+          "type": {
+            "name": "string"
+          },
+          "description": "Description of multilineProp.\nThis should be multiline\nAnything else ?"
+        },
+        {
+          "name": "noDefaultValueProp",
+          "required": false,
+          "type": {
+            "name": "string"
+          },
+          "description": "Description of noDefaultValueProp."
         }
       ],
       "displayName": "Component"

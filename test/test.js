@@ -10,7 +10,7 @@ describe('react-docer', () => {
   it('Class with static properties should work', () => {
     docer(fs.readFileSync(path.join(__dirname, 'static', 'static.jsx'), 'utf-8')).should.be.eql(require(path.join(__dirname, 'static', 'static.json')));
   });
-  it('Class with static properties should work', () => {
+  it('Sample should work', () => {
     docer(fs.readFileSync(path.join(__dirname, 'sample', 'sample.jsx'), 'utf-8')).should.be.eql(require(path.join(__dirname, 'sample', 'sample.json')));
   });
 });
