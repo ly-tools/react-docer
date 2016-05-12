@@ -37,7 +37,7 @@ export default {
     });
   },
   after: result => {
-    result.classes.forEach(cla => cla.properties.forEach(property => {
+    (result.classes || []).forEach(cla => cla.properties.forEach(property => {
       property.value = generator(property.value).code;
     }));
   }

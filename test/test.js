@@ -13,4 +13,7 @@ describe('react-docer', () => {
   it('Sample should work', () => {
     docer(fs.readFileSync(path.join(__dirname, 'sample', 'sample.jsx'), 'utf-8')).should.be.eql(require(path.join(__dirname, 'sample', 'sample.json')));
   });
+  it('Should not throw error when no classes', () => {
+    docer(fs.readFileSync(path.join(__dirname, 'empty', 'index.jsx'), 'utf-8')).should.be.eql(require(path.join(__dirname, 'empty', 'index.json')));
+  });
 });
