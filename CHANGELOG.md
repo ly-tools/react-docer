@@ -1,5 +1,9 @@
 # react-docer
 
+## 1.1.4
+
+* Fix bugs when empty class
+
 ## 1.1.3
 
 * Fix error when empty file

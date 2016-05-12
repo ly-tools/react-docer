@@ -16,4 +16,7 @@ describe('react-docer', () => {
   it('Should not throw error when no classes', () => {
     docer(fs.readFileSync(path.join(__dirname, 'empty', 'index.jsx'), 'utf-8')).should.be.eql(require(path.join(__dirname, 'empty', 'index.json')));
   });
+  it('Should not throw error while empty class', () => {
+    docer(fs.readFileSync(path.join(__dirname, 'emptyClass', 'index.jsx'), 'utf-8')).should.be.eql(require(path.join(__dirname, 'emptyClass', 'index.json')));
+  });
 });

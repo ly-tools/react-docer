@@ -13,9 +13,8 @@ export default {
   parse: (node, result) => {
     const getter = defineGetter(node);
     result.classes = result.classes || [];
-    result.classes.push({
+    let rst = {
       name: getter('id.name'),
-      superClass: generator(getter('superClass')).code,
       description: getClosestComment(node),
       methods: (getter('body.body') || []).filter(isClassMethod).map(method => {
         const methodGetter = defineGetter(method);
@@ -34,7 +33,9 @@ export default {
           'static': !!propertyGetter('static')
         };
       })
-    });
+    };
+    if (getter('superClass')) rst.superClass = generator(getter('superClass')).code;
+    result.classes.push(rst);
   },
   after: result => {
     (result.classes || []).forEach(cla => cla.properties.forEach(property => {

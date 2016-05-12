@@ -34,6 +34,7 @@ export default (content, config) => {
           plugin.check(node) && plugin.parse(node, result);
         } catch (e) {
           logger.error(`Error occur in plugin ${plugin.name}: ${e.message}`);
+          logger.error(e.stack);
         }
       });
     }
