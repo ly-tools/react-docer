@@ -1,5 +1,9 @@
 # react-docer
 
+## 1.1.5
+
+* Add all available plugins of babylon
+
 ## 1.1.4
 
 * Fix bugs when empty class

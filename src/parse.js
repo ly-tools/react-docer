@@ -25,7 +25,22 @@ export default (content, config) => {
   let result = {};
   traverse(parse(content, {
     sourceType: 'module',
-    plugins: ['jsx', 'classProperties']
+    plugins: [
+      'jsx',
+      'flow',
+      'asyncFunctions',
+      'classConstructorCall',
+      'doExpressions',
+      'trailingFunctionCommas',
+      'objectRestSpread',
+      'decorators',
+      'classProperties',
+      'exportExtensions',
+      'exponentiationOperator',
+      'asyncGenerators',
+      'functionBind',
+      'functionSent'
+    ]
   }), {
     enter(path) {
       const node = path.node;
