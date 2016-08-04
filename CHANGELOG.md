@@ -1,5 +1,9 @@
 # react-docer
 
+## 1.1.3
+
+* Fix error when parse async require
+
 ## 1.1.2
 
 * Fix type of static properties

@@ -13,4 +13,7 @@ describe('react-docer', () => {
   it('Sample should work', () => {
     docer(fs.readFileSync(path.join(__dirname, 'sample', 'sample.jsx'), 'utf-8')).should.be.eql(require(path.join(__dirname, 'sample', 'sample.json')));
   });
+  it('Async require should work', () => {
+    docer(fs.readFileSync(path.join(__dirname, 'asyncRequire', 'index.jsx'), 'utf-8')).should.be.eql(require(path.join(__dirname, 'asyncRequire', 'index.json')));
+  });
 });
