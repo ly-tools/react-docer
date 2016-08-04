@@ -25,7 +25,22 @@ export default (content, config) => {
   let result = {};
   traverse(parse(content, {
     sourceType: 'module',
-    plugins: ['jsx', 'classProperties']
+    plugins: [
+      'jsx',
+      'flow',
+      'asyncFunctions',
+      'classConstructorCall',
+      'doExpressions',
+      'trailingFunctionCommas',
+      'objectRestSpread',
+      'decorators',
+      'classProperties',
+      'exportExtensions',
+      'exponentiationOperator',
+      'asyncGenerators',
+      'functionBind',
+      'functionSent'
+    ]
   }), {
     enter(path) {
       const node = path.node;
@@ -34,6 +49,7 @@ export default (content, config) => {
           plugin.check(node) && plugin.parse(node, result);
         } catch (e) {
           logger.error(`Error occur in plugin ${plugin.name}: ${e.message}`);
+          logger.error(e.stack);
         }
       });
     }

@@ -1,8 +1,20 @@
 # react-docer
 
-## 1.1.3
+## 1.1.6
 
 * Fix error when parse async require
+
+## 1.1.5
+
+* Add all available plugins of babylon
+
+## 1.1.4
+
+* Fix bugs when empty class
+
+## 1.1.3
+
+* Fix error when empty file
 
 ## 1.1.2
 
